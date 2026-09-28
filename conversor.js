@@ -37,5 +37,10 @@ do {
             distMilhas = (distKm * 0.621371).toFixed(2)
             console.log(`${distKm} equivalem a ${distMilhas} milhas.`)
             break
+        case '4':
+            distMilhas = Number(prompt('Distância em milhas: '))
+            distKm = (distMilhas * 1.60934).toFixed(2)
+            console.log(`${distMilhas} milhas equivalem a ${distKm} km.`)
+            break
     }
 } while(opcao !== '0')
