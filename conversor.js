@@ -46,5 +46,8 @@ do {
                 console.log(`${distMilhas} milhas equivalem a ${distKm} km.`)
             }
             break
+        default:
+            console.log('Opção inválida!')
+            break
     }
 } while(opcao !== '0')
