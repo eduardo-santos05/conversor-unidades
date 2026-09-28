@@ -3,6 +3,8 @@ import PromptSync from "prompt-sync"
 const prompt = PromptSync()
 
 let opcao = ''
+let tempCelsius = ''
+let tempFahrenheit = ''
 
 do {
     console.log()
@@ -19,8 +21,13 @@ do {
             console.log('Encerrando o conversor. Até a próxima!')
             break
         case '1':
-            let tempCelsius = prompt('Temperatura em Celsius: ')
-            let tempFahrenheit = tempCelsius * 1.8 + 32
+            tempCelsius = prompt('Temperatura em Celsius: ')
+            tempFahrenheit = tempCelsius * 1.8 + 32
             console.log(`${tempCelsius} ºC equivalem a ${tempFahrenheit} ºF.`)
+            break
+        case '2':
+            tempFahrenheit = prompt('Temperatura em Fahrenheit: ')
+            tempCelsius = (tempFahrenheit - 32) * 5/9
+            console.log(`${tempFahrenheit} ºF equivalem a ${tempCelsius} ºC.`)
     }
 } while(opcao !== '0')
