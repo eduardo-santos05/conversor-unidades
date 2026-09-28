@@ -39,8 +39,12 @@ do {
             break
         case '4':
             distMilhas = Number(prompt('Distância em milhas: '))
-            distKm = (distMilhas * 1.60934).toFixed(2)
-            console.log(`${distMilhas} milhas equivalem a ${distKm} km.`)
+            if(distMilhas < 0) {
+                console.log('Distância não pode ser negativa.')
+            } else {
+                distKm = (distMilhas * 1.60934).toFixed(2)
+                console.log(`${distMilhas} milhas equivalem a ${distKm} km.`)
+            }
             break
     }
 } while(opcao !== '0')
