@@ -18,5 +18,9 @@ do {
         case '0':
             console.log('Encerrando o conversor. Até a próxima!')
             break
+        case '1':
+            let tempCelsius = prompt('Temperatura em Celsius: ')
+            let tempFahrenheit = tempCelsius * 1.8 + 32
+            console.log(`${tempCelsius} ºC equivalem a ${tempFahrenheit} ºF.`)
     }
 } while(opcao !== '0')
